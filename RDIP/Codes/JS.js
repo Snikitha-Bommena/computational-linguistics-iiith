@@ -16,7 +16,26 @@
   var h5 = ["बिल्लियों को मारकर कुत्ता सो गया","मारकर बिल्लियों को कुत्ता सो गया","बिल्लियों को मारकर सो गया कुत्ता","मारकर बिल्लियों को सो गया कुत्ता","कुत्ता सो गया बिल्लियों को मारकर","कुत्ता सो गया मारकर बिल्लियों को","सो गया कुत्ता बिल्लियों को मारकर","सो गया कुत्ता मारकर बिल्लियों को"];
   var h6 = ["एक लाल किताब वहाँ है","एक लाल किताब है वहाँ","वहाँ है एक लाल किताब","है वहाँ एक लाल किताब"];
   var h7 = ["एक बड़ी सी किताब वहाँ है","एक बड़ी सी किताब है वहाँ","बड़ी सी एक किताब वहाँ है","बड़ी सी एक किताब है वहाँ","वहाँ है एक बड़ी सी किताब","वहाँ है बड़ी सी एक किताब"," है वहाँ एक बड़ी सी किताब","है वहाँ बड़ी सी एक किताब"];
-  fungtion array()
-  {
-  	
-  }
+ 
+   function GetSelectedTextValue(language) {
+        var lang = language.value;
+        if(lang == "1"){
+        	alert("Select language");
+        	return false;
+
+        }
+        if(lang == "2"){
+        	english(); 	
+        }
+        if(lang == "3"){
+        	hindi();
+        	 }
+    }
+    function english(){
+    	document.getElementById("demo").innerHTML = "Form a sentence(Declarative or Interrogative or any other type) from the given words";
+    	document.getElementById("dem").innerHTML = "(select the buttons in proper order)"
+    }
+     function hindi(){
+    	document.getElementById("demo").innerHTML = "Form a sentence(Declarative or Interrogative or any other type) from the given words";
+    	document.getElementById("dem").innerHTML = "(select the button in proper order)"
+    }
