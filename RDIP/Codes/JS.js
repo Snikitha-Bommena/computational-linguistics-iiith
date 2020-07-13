@@ -44,20 +44,113 @@
    function sentence(sen){
     var str = sen.split(" ");
    var suf = shuffle(str);
-    buttons(suf);
-   }
- function buttons(str){
+   var l = suf.length;
+    printBtn(suf ,l);
+   } 
+  /* function buttons(str){
     var a= 1;
+    for (i =0;i< str.length ;i++){
+      const createBtn = (text = str[i]) =>{
+        const btn = document.createElement('button');
+        btn.innerText = str[i];
+        document.body.appendChild(btn)
+        return btn};
+    }
+   }*/
+  /*function buttons(str){
+    var a= 1;
+    for (i =0;i< str.length ;i++){
+      var button = document.createElement("button");
+      button.innerHtml = str[i];
+       a+= String(parseFloat(a)+1);
+       document.getElementById("input");
+      input.appendChild(button);
+       
+       button.addEventListener("click" , function(){
+        alert("dd");
+       });
+    }
+   } */
+/* function buttons(str){
+  var a=1;
     for (i =0;i< str.length ;i++){
       var button = document.createElement("button");
       button.setAttribute("id" , a);
       button.setAttribute("value",str[i]);
       a+= String(parseFloat(a)+1);
       button.innerHTML = str[i];
-      document.getElementById("input").appendChild(button);
+      var b = str[i];
+     var input = 
+      document.getElementById("input");
+      input.appendChild(button); }
+      button.addEventListener ("click" , display( button.value));
+  } 
+ function display(b){
+ document.getElementById("output").innerHTML = "Formed Sentence(after selecting words)" ;
+    document.getElementById("sentence").innerHTML = b; 
+    } */
+
+ /* function buttons(str){
+       for (i =0;i< str.length ;i++){
+        var a =1;
+      var type = "button";
+      var element = document.createElement("input");
+      element.type = type;
+      a+= String(parseFloat(a)+1);
+      element.value = str[i];
+      element.name = type;
+      var f = document.getElementById("input");
+      document.getElementById("in").innerHTML += "&nbsp;&nbsp;&nbsp;";
+      f.appendChild(element);
+      
     }
-    document.getElementById("output").value = "";
+  } */
+ /*  function buttons(str){
+    var c=0;
+     var i = 0;
+    while(c < str.length)
+    {
+      var a = 0;
+       var button = document.createElement("button");
+      button.setAttribute("id" , a);
+      button.setAttribute("value",str[i]);
+      a+= String(parseFloat(a)+1);
+      button.innerHTML = str[i];
+      var b = str[i];
+     var input = 
+      document.getElementById("input");
+      input.appendChild(button); 
+      button.addEventListener ("click" , display(b));
+     i++;
+    c++;
+    }
   }
+  function display(b){
+ document.getElementById("output").innerHTML = "Formed Sentence(after selecting words)" ;
+    document.getElementById("sentence").innerHTML = b; 
+    } */
+   
+     function printBtn(suf , l) {
+                       for (i =0;i<l;i++){
+                        var b = suf[i]
+                       var btn = document.createElement("button");
+                       var t = document.createTextNode(suf[i]);
+                       btn.appendChild(t);
+                       document.body.appendChild(btn);
+                    btn.addEventListener('click', function(suf , l){
+                        document.getElementById("output").innerHTML = "Formed Sentence(after selecting words)" ;
+                        for (i =0;i<l;i++){
+                          document.getElementById("disappears").innerHTML = "";
+    document.getElementById("sentence").innerHTML = suf[i]; 
+
+                    }});}
+                } 
+function reform(){
+}
+            /*   function display( ){
+ document.getElementById("output").innerHTML = "Formed Sentence(after selecting words)" ;
+    document.getElementById("sentence").innerHTML = b;  
+   } */
   function shuffle(a){
     var  j,i,temp;
     for(i = a.length-1;i>0;i--){
@@ -79,4 +172,5 @@
     }
     return str;
 }*/
+
     

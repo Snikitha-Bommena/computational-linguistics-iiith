@@ -5,23 +5,34 @@
 	<h1>Experiment</h1>
 	<link rel = "stylesheet" type = "text/css" href = "CSS.css">
 	<script src = "JS.js">
-   
-</script>
+   </script></head>
+<body>
+	<!--<select id = "language" onchange="fun1()">
+        <option value="1">---Select Language---</option>
+      <option value = "2">English</option>
+     <option value="3">Hindi</option></select><br><br> -->
 <div class="select">
 		<select id="language" onchange="GetSelectedTextValue(this)">
 	<option value="1">---Select Language---</option>
     <option value="2">English</option>
     <option value="3">Hindi</option>
-</select>
+</select> 
 <div class = "textcolor">
 <p id="demo"></p></div>
 <div class = "tcolor">
 <p id="dem"></p></div>
 </div>
-<p id = "input"></p><br>
-<p id = "output"></p><br>
+<p id = "in"></p>
+<p id = "input" ></p><br>
+<div class = "textcolor">
+	<div id = "disappear">
+		 <body  onload="printBtn();">
+</div>
 
-<p id = "msg"></p>
-</head>
+<p id = "output"></p><br></div>
+<p id = "sentence"></p>
+<div class = "formed">
+	 <td><input type="button" value="Re-form the sentence" onclick= 'reform()'/> </td>
+</body>
 </html>
 	

@@ -1,18 +1,25 @@
 	div.select{
 			text-align:center;
 	      position :relative;
-	top :100px;
+	top :50px;
 		}
 		div.textcolor{
 			font-family: sans-serif;
 			font-weight: bold;
 			font-size :20px;
 			color:#0000cc;
+			  position :relative;
+	top :75px;
 		}
 		div.tcolor{
 			font-family: sans-serif;
 			font-style: italic;
 			font-size: 15px;
 			color:blue;
+			  position :relative;
+	top :85px;
 		}
-	
+		div.formed{
+			position: relative;
+			top : 350px;
+		}
