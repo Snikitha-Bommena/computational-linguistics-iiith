@@ -52,7 +52,6 @@
                         var b = suf[i]
                        var btn = document.createElement("button");
                        var t = document.createTextNode(suf[i]);
-                  
                        btn.appendChild(t);
                        document.body.appendChild(btn);
                     btn.addEventListener('click', function(suf , l){
@@ -62,19 +61,7 @@
     this.style.display="none";
     
      document.getElementById("o1").style.visibility="visible";
-   /* count=count+1;
-   if (count>0 ) 
-     {
-      document.getElementById("o1").style.visibility="visible";
-     }
-     var v=String(document.getElementById("op2").innerHTML).replace(/\s+$/, '');
-     v1=v.split(" ")
   
-     
-     if( l ==   v1.length)
-     {
-      document.getElementById("o2").style.visibility="visible";
-     } */
 
                     });}
 
