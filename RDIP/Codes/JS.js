@@ -66,13 +66,11 @@
                     });}
 
    }  
-
-   
-    function printBtn(suf , l) {
-                      
-                } 
 function reform(){   
-}    
+}  
+function correct(){
+
+}  
   function shuffle(a){
     var  j,i,temp;
     for(i = a.length-1;i>0;i--){
