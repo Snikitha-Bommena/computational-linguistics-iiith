@@ -52,8 +52,7 @@
                         var b = suf[i]
                        var btn = document.createElement("button");
                        var t = document.createTextNode(suf[i]);
-                        btn.id='button'+i;
-                        btn.className="btn btn-secondary"
+                  
                        btn.appendChild(t);
                        document.body.appendChild(btn);
                     btn.addEventListener('click', function(suf , l){
