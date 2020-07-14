@@ -42,115 +42,51 @@
         }
         	 }
    function sentence(sen){
+  document.getElementById("o1").style.visibility="hidden";
+  document.getElementById("o2").style.visibility="hidden"
+   document.getElementById("o3").style.visibility="hidden";
     var str = sen.split(" ");
    var suf = shuffle(str);
    var l = suf.length;
-    printBtn(suf ,l);
-   } 
-  /* function buttons(str){
-    var a= 1;
-    for (i =0;i< str.length ;i++){
-      const createBtn = (text = str[i]) =>{
-        const btn = document.createElement('button');
-        btn.innerText = str[i];
-        document.body.appendChild(btn)
-        return btn};
-    }
-   }*/
-  /*function buttons(str){
-    var a= 1;
-    for (i =0;i< str.length ;i++){
-      var button = document.createElement("button");
-      button.innerHtml = str[i];
-       a+= String(parseFloat(a)+1);
-       document.getElementById("input");
-      input.appendChild(button);
-       
-       button.addEventListener("click" , function(){
-        alert("dd");
-       });
-    }
-   } */
-/* function buttons(str){
-  var a=1;
-    for (i =0;i< str.length ;i++){
-      var button = document.createElement("button");
-      button.setAttribute("id" , a);
-      button.setAttribute("value",str[i]);
-      a+= String(parseFloat(a)+1);
-      button.innerHTML = str[i];
-      var b = str[i];
-     var input = 
-      document.getElementById("input");
-      input.appendChild(button); }
-      button.addEventListener ("click" , display( button.value));
-  } 
- function display(b){
- document.getElementById("output").innerHTML = "Formed Sentence(after selecting words)" ;
-    document.getElementById("sentence").innerHTML = b; 
-    } */
-
- /* function buttons(str){
-       for (i =0;i< str.length ;i++){
-        var a =1;
-      var type = "button";
-      var element = document.createElement("input");
-      element.type = type;
-      a+= String(parseFloat(a)+1);
-      element.value = str[i];
-      element.name = type;
-      var f = document.getElementById("input");
-      document.getElementById("in").innerHTML += "&nbsp;&nbsp;&nbsp;";
-      f.appendChild(element);
-      
-    }
-  } */
- /*  function buttons(str){
-    var c=0;
-     var i = 0;
-    while(c < str.length)
-    {
-      var a = 0;
-       var button = document.createElement("button");
-      button.setAttribute("id" , a);
-      button.setAttribute("value",str[i]);
-      a+= String(parseFloat(a)+1);
-      button.innerHTML = str[i];
-      var b = str[i];
-     var input = 
-      document.getElementById("input");
-      input.appendChild(button); 
-      button.addEventListener ("click" , display(b));
-     i++;
-    c++;
-    }
-  }
-  function display(b){
- document.getElementById("output").innerHTML = "Formed Sentence(after selecting words)" ;
-    document.getElementById("sentence").innerHTML = b; 
-    } */
-   
-     function printBtn(suf , l) {
-                       for (i =0;i<l;i++){
+    for (i =0;i<l;i++){
                         var b = suf[i]
                        var btn = document.createElement("button");
                        var t = document.createTextNode(suf[i]);
+                        btn.id='button'+i;
+                        btn.className="btn btn-secondary"
                        btn.appendChild(t);
                        document.body.appendChild(btn);
                     btn.addEventListener('click', function(suf , l){
-                        document.getElementById("output").innerHTML = "Formed Sentence(after selecting words)" ;
-                        for (i =0;i<l;i++){
-                          document.getElementById("disappears").innerHTML = "";
-    document.getElementById("sentence").innerHTML = suf[i]; 
+                        document.getElementById("op1").innerHTML = "Formed Sentence(after selecting words)" ;
+          
+    document.getElementById("op2").innerHTML+=this.innerHTML+" ";
+    this.style.display="none";
+    
+     document.getElementById("o1").style.visibility="visible";
+   /* count=count+1;
+   if (count>0 ) 
+     {
+      document.getElementById("o1").style.visibility="visible";
+     }
+     var v=String(document.getElementById("op2").innerHTML).replace(/\s+$/, '');
+     v1=v.split(" ")
+  
+     
+     if( l ==   v1.length)
+     {
+      document.getElementById("o2").style.visibility="visible";
+     } */
 
-                    }});}
+                    });}
+
+   }  
+
+   
+    function printBtn(suf , l) {
+                      
                 } 
-function reform(){
-}
-            /*   function display( ){
- document.getElementById("output").innerHTML = "Formed Sentence(after selecting words)" ;
-    document.getElementById("sentence").innerHTML = b;  
-   } */
+function reform(){   
+}    
   function shuffle(a){
     var  j,i,temp;
     for(i = a.length-1;i>0;i--){
@@ -161,16 +97,6 @@ function reform(){
     }
     return a;
   }
-  /*function shuffle(str) {
-    var ctr = str.length, temp, index;
-    while (ctr > 0) {
-        index = Math.floor(Math.random() * ctr);
-        ctr--;
-        temp = str[ctr];
-        str[ctr] = str[index];
-        str[index] = temp;
-    }
-    return str;
-}*/
+  
 
     

@@ -21,5 +21,14 @@
 		}
 		div.formed{
 			position: relative;
-			top : 350px;
+			color:#0000cc;
+			top : 50px;
+		}
+		div.output{
+			position : relative;
+			top : 120px;
+		}
+		div.output1{
+			position : relative;
+			top : 130px;
 		}
