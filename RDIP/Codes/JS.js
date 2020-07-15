@@ -15,20 +15,25 @@
   '{"a":"बिल्लियों को मारकर कुत्ता सो गया","b":"मारकर बिल्लियों को कुत्ता सो गया","c":"बिल्लियों को मारकर सो गया कुत्ता","d":"मारकर बिल्लियों को सो गया कुत्ता","e":"कुत्ता सो गया बिल्लियों को मारकर","f":"कुत्ता सो गया मारकर बिल्लियों को","g":"सो गया कुत्ता बिल्लियों को मारकर","h":"सो गया कुत्ता मारकर बिल्लियों को"},'+
   '{"a":"एक लाल किताब वहाँ है","b":"एक लाल किताब है वहाँ","c":"वहाँ है एक लाल किताब","d":"है वहाँ एक लाल किताब"},'+
   '{"a":"एक बड़ी सी किताब वहाँ है","b":"एक बड़ी सी किताब है वहाँ","c":"बड़ी सी एक किताब वहाँ है","d":"बड़ी सी एक किताब है वहाँ","e":"वहाँ है एक बड़ी सी किताब","f":"वहाँ है बड़ी सी एक किताब","g":" है वहाँ एक बड़ी सी किताब","h":"है वहाँ बड़ी सी एक किताब"}]}';
-
-   function GetSelectedTextValue(language) {
+    
+     var rnd = Math.floor(Math.random()*10);
+       var line = JSON.parse(text);
+       var e = line.eng[rnd].a;
+       var rnds = Math.floor(Math.random()*7);
+       var lines = JSON.parse(text2);
+       var  h = lines.hindi[rnds].a;
+       var r;
+        function GetSelectedTextValue(language) {
         var lang = language.value;
         if(lang == "1"){
         	alert("Select language");
         	return false;
-
         }
         if(lang == "2"){
           document.getElementById("demo").innerHTML = "Form a sentence(Declarative or Interrogative or any other type) from the given words";
       document.getElementById("dem").innerHTML = "(select the buttons in proper order)"
       document.getElementById("input").innerHTML = "";
-       var rnd = Math.floor(Math.random()*10);
-       var line = JSON.parse(text);
+       r=2;
        sentence(line.eng[rnd].a);	
         }
         if(lang == "3"){
@@ -36,41 +41,67 @@
         	 document.getElementById("demo").innerHTML = "Form a sentence(Declarative or Interrogative or any other type) from the given words";
       document.getElementById("dem").innerHTML = "(select the buttons in proper order)"
       document.getElementById("input").innerHTML = "";
-       var rnd = Math.floor(Math.random()*7);
-       var lines = JSON.parse(text2);
-       sentence(lines.hindi[rnd].a); 
+       r = 3;
+       sentenceh(lines.hindi[rnds].a); 
         }
         	 }
+          var str = e.split(" ");
+   var suf = shuffle(str);
+   var l = suf.length;
    function sentence(sen){
   document.getElementById("o1").style.visibility="hidden";
   document.getElementById("o2").style.visibility="hidden"
    document.getElementById("o3").style.visibility="hidden";
-    var str = sen.split(" ");
-   var suf = shuffle(str);
-   var l = suf.length;
-    for (i =0;i<l;i++){
-                        var b = suf[i]
+    
+    buttons(suf ,l);
+    }
+     var strh = h.split(" ");
+   var sufh = shuffle(strh);
+   var lh = sufh.length;
+    function sentenceh(sen){
+  document.getElementById("o1").style.visibility="hidden";
+  document.getElementById("o2").style.visibility="hidden"
+   document.getElementById("o3").style.visibility="hidden";
+   
+    buttons(sufh ,lh);
+    }
+    function buttons(suff,le){
+    for (i =0;i<le;i++){
+                        var b = suff[i]
                        var btn = document.createElement("button");
-                       var t = document.createTextNode(suf[i]);
+                       var t = document.createTextNode(suff[i]);
+                        btn.id='b'+i;
                        btn.appendChild(t);
                        document.body.appendChild(btn);
-                    btn.addEventListener('click', function(suf , l){
+                    btn.addEventListener('click', function(suff , le){
                         document.getElementById("op1").innerHTML = "Formed Sentence(after selecting words)" ;
           
     document.getElementById("op2").innerHTML+=this.innerHTML+" ";
-    this.style.display="none";
+    this.style.display="none"; 
     
      document.getElementById("o1").style.visibility="visible";
-  
-
-                    });}
-
-   }  
-function reform(){   
-}  
-function correct(){
-
-}  
+ });}
+ }
+function reform(){  
+  if(r ==2){
+  document.getElementById("op2").innerHTML = " ";
+  document.getElementById("op1").innerHTML = " " ;
+      for(i=0;i<l;i++)
+  {   if(document.getElementById('b'+i).style.display=="none")
+    {
+   document.getElementById('b'+i).style.display="inline";
+      }
+    }}
+    if(r==3){
+      document.getElementById("op2").innerHTML = " ";
+      document.getElementById("op1").innerHTML = " " ;
+      for(i=0;i<lh;i++)
+  {   if(document.getElementById('b'+i).style.display=="none")
+    {
+   document.getElementById('b'+i).style.display="inline";
+      }
+    }}
+    }
   function shuffle(a){
     var  j,i,temp;
     for(i = a.length-1;i>0;i--){

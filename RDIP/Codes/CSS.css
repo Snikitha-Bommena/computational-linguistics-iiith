@@ -20,19 +20,26 @@
 	top :85px;
 		}
 		div.formed{
+			text-align:center;
 			position: relative;
 			color:#0000cc;
 			top : 50px;
 		}
 		div.output{
+			text-align:center;
 			position : relative;
 			top : 120px;
 		}
 		div.output1{
+			text-align:center;
 			position : relative;
 			top : 130px;
 		}
 		button{
+			text-align:center;
          position : relative;
 			top : 70px;
+		}
+		div.output2{
+			text-align:center;
 		}
