@@ -43,3 +43,8 @@
 		div.output2{
 			text-align:center;
 		}
+		div.check{
+			text-align:center;
+			 position : relative;
+			top : 170px;
+		}

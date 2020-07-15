@@ -23,6 +23,8 @@
        var lines = JSON.parse(text2);
        var  h = lines.hindi[rnds].a;
        var r;
+       var c = 0;
+      
         function GetSelectedTextValue(language) {
         var lang = language.value;
         if(lang == "1"){
@@ -50,7 +52,7 @@
    var l = suf.length;
    function sentence(sen){
   document.getElementById("o1").style.visibility="hidden";
-  document.getElementById("o2").style.visibility="hidden"
+  document.getElementById("o2").style.visibility="hidden";
    document.getElementById("o3").style.visibility="hidden";
     
     buttons(suf ,l);
@@ -77,12 +79,18 @@
                         document.getElementById("op1").innerHTML = "Formed Sentence(after selecting words)" ;
           
     document.getElementById("op2").innerHTML+=this.innerHTML+" ";
-    this.style.display="none"; 
-    
+    this.style.display="none";
      document.getElementById("o1").style.visibility="visible";
+    if(r == 2){
+     correct();
+    }
+    if(r == 3){
+      correcth();
+    }
  });}
  }
 function reform(){  
+  c = 0;
   if(r ==2){
   document.getElementById("op2").innerHTML = " ";
   document.getElementById("op1").innerHTML = " " ;
@@ -91,8 +99,20 @@ function reform(){
     {
    document.getElementById('b'+i).style.display="inline";
       }
+    }
+     document.getElementById("o2").style.visibility="hidden";
+   for(i=0;i<l;i++)
+  { 
+     if(document.getElementById('b'+i).style.display=="none"){
+    c = c+1;
+      }
+    } 
+var p;
+ p = (l * (l + 1)) / 2 ;
+   if(c == p){
+       document.getElementById("o2").style.visibility="visible";
     }}
-    if(r==3){
+    if(r == 3){
       document.getElementById("op2").innerHTML = " ";
       document.getElementById("op1").innerHTML = " " ;
       for(i=0;i<lh;i++)
@@ -100,8 +120,46 @@ function reform(){
     {
    document.getElementById('b'+i).style.display="inline";
       }
-    }}
+    }document.getElementById("o2").style.visibility="hidden";
+     for(i=0;i<lh;i++)
+  { 
+     if(document.getElementById('b'+i).style.display=="none"){
+    c = c+1;
+      }
+    } 
+var p;
+ p = (lh * (lh + 1)) / 2 ;
+   if(c == p){
+       document.getElementById("o2").style.visibility="visible";
     }
+  }
+    }
+    function correct(){
+     for(i=0;i<l;i++)
+  { 
+     if(document.getElementById('b'+i).style.display=="none"){
+    c = c+1;
+      }
+    } 
+var p;
+ p = (l * (l + 1)) / 2 ;
+   if(c == p){
+       document.getElementById("o2").style.visibility="visible";
+    }
+  }
+  function correcth(){
+     for(i=0;i<lh;i++)
+  { 
+     if(document.getElementById('b'+i).style.display=="none"){
+    c = c+1;
+      }
+    } 
+var p;
+ p = (lh * (lh + 1)) / 2 ;
+   if(c == p){
+       document.getElementById("o2").style.visibility="visible";
+    }
+  }
   function shuffle(a){
     var  j,i,temp;
     for(i = a.length-1;i>0;i--){
