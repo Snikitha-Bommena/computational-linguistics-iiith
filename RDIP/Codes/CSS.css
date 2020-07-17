@@ -30,21 +30,25 @@ div.select{
 			position : relative;
 			top : 120px;
 		}
-		div.output1{
+		div.ans{
+			text-align:center;
+			position: relative;
+			top : 150px;
+		}
+		div.ref{
 			text-align:center;
 			position : relative;
 			top : 130px;
+		}
+		
+		
+		div.crt{
+			text-align:center;
+			 position : relative;
+			top : 170px;
 		}
 		button{
 			text-align:center;
          position : relative;
 			top : 70px;
-		}
-		div.output2{
-			text-align:center;
-		}
-		div.check{
-			text-align:center;
-			 position : relative;
-			top : 170px;
 		}

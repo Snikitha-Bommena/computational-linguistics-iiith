@@ -13,7 +13,7 @@
      <option value="3">Hindi</option></select><br><br> -->
 <div class="select">
 		<select id="language" onchange="GetSelectedTextValue(this)">
-	<option value="1">---Select Language---</option>
+	<option value="1" selected>---Select Language---</option>
     <option value="2">English</option>
     <option value="3">Hindi</option>
 </select> 
@@ -30,13 +30,12 @@
 <div class = "output">
 	<p id = "op2"></p> </div>
 <p id = "op3"></p>
-
 <button id="o1" style="visibility: hidden" onclick="reform()">Re-form the sentence</button><br>
-
 
 <button id="o2" style="visibility: hidden" onclick="find()" >Check the correctness of this sentence</button>
 <button id="o3" style="visibility: hidden" onclick="" >Get Correct Sentence</button><br>
-<p id="op4"></p>
+<div class = "ans">
+<p id="op4"></p></div>
 <p id="op5"></p>
 </body>
 </html>

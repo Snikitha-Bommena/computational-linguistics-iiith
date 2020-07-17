@@ -1,5 +1,5 @@
  var text ='{"eng":['+'{"a":"John ate an apple before afternoon" ,"b": "some students like to study in the night" , "c":"John and Mary went to church" , "d":"John went to church after eating" , "e":"did he go to market" , "f":"the woman who called my sister sells cosmetics" , "g":"John goes to the library and studies" , "h":"John ate an apple so did she" , "i":"the teacher returned the book after she noticed the error" , "j":"I told her that I bought a book yesterday"},'+
-'{"a":"before afternoon John ate an apple" ,"b": "at night some students like to study" , "c":"Mary and John went to church" , "d":"after eating John went to church" , "e":"he did go to market" , "f":"the woman who sells cosmetics called my sister" , "g":"John studies and goes to the library" , "h":"she ate an apple so did John" , "i":"the teacher noticed the error after she returned the book" , "j":"I told her yesterday that I bought a book"},'+
+'{"a":"before afternoon John ate an apple" ,"b": "in the night some students like to study" , "c":"Mary and John went to church" , "d":"after eating John went to church" , "e":"he did go to market" , "f":"the woman who sells cosmetics called my sister" , "g":"John studies and goes to the library" , "h":"she ate an apple so did John" , "i":"the teacher noticed the error after she returned the book" , "j":"I told her yesterday that I bought a book"},'+
 '{"a":"John before afternoon ate an apple" ,"b": "none" , "c":"none" , "d":"John after eating went to church" , "e":"none" , "f":"my sister who sells cosmetics called the woman" , "g":"none" , "h":"none" , "i":"after the teacher returned the book she noticed the error" , "j":"yesterday I told her that I bought a book"},'+
 '{"a":"none" ,"b": "none" , "c":"none" , "d":"none" , "e":"none" , "f":"my sister who called the woman sells cosmetics" , "g":"none" , "h":"none" , "i":"after the teacher noticed the error she returned the book" , "j":"I bought a book that I told her yesterday"},'+
 '{"a":"none" ,"b": "none" , "c":"none" , "d":"none" , "e":"none" , "f":"none" , "g":"none" , "h":"none" , "i":"she returned the book after the teacher noticed the error" , "j":"I bought a book yesterday that I told her"},'+
@@ -19,8 +19,9 @@
 '{"a":"none","b":"none","c":"बताया उसे मैंने कि राम सो रहा है","d":"none","e":"none","f":"none","g":"none"},'+
 '{"a":"none","b":"none","c":"बताया उसे मैंने कि सो रहा है राम","d":"none","e":"none","f":"none","g":"none"}]}';
  var total=["John ate an apple before afternoon","some students like to study in the night","John and Mary went to church","John went to church after eating","did he go to market","the woman who called my sister sells cosmetics","John goes to the library and studies","John ate an apple so did she","the teacher returned the book after she noticed the error","I told her that I bought a book yesterday"];
-var totalh=["राम और श्याम बाजार गयें","राम सोया और श्याम भी","मैंने उसे बताया कि राम सो रहा है","राम खाकर सोया","बिल्लियों को मारकर कुत्ता सो गया"  ,"एक लाल किताब वहाँ है","एक बड़ी सी किताब वहाँ है  "];
-     var rnd = Math.floor(Math.random()*10);
+var totalh=["राम और श्याम बाजार गयें","राम सोया और श्याम भी","मैंने उसे बताया कि राम सो रहा है","राम खाकर सोया","बिल्लियों को मारकर कुत्ता सो गया"  ,"एक लाल किताब वहाँ है","एक बड़ी सी किताब वहाँ है"];
+     var rnd = Math.floor(Math.random()*10); 
+   
        var line = JSON.parse(text);
       /* var e = line.eng[rnd].a;
        var  h = lines.hindi[rnds].a;  */
@@ -30,7 +31,7 @@ var totalh=["राम और श्याम बाजार गयें","र
        var h = totalh[rnds];
        var r;
        var c = 0;
-      
+     var g = 0; 
         function GetSelectedTextValue(language) {
         var lang = language.value;
         if(lang == "1"){
@@ -42,17 +43,26 @@ var totalh=["राम और श्याम बाजार गयें","र
       document.getElementById("dem").innerHTML = "(select the buttons in proper order)"
       document.getElementById("input").innerHTML = "";
        r=2;
-       sentence(e); 
+       if(g == 1){
+        change();
+       }
+       else{
+       sentence(e);
+     } 
         }
         if(lang == "3"){
            
            document.getElementById("demo").innerHTML = "Form a sentence(Declarative or Interrogative or any other type) from the given words";
       document.getElementById("dem").innerHTML = "(select the buttons in proper order)"
       document.getElementById("input").innerHTML = "";
-       r = 3;
-       sentenceh(h); 
+        r = 3;
+       if(g == 1){
+        change();
+       }
+       else{
+       sentenceh(h); }
         }
-           }
+           } 
           var str = e.split(" ");
    var suf = shuffle(str);
    var l = suf.length;
@@ -60,7 +70,8 @@ var totalh=["राम और श्याम बाजार गयें","र
   document.getElementById("o1").style.visibility="hidden";
   document.getElementById("o2").style.visibility="hidden";
    document.getElementById("o3").style.visibility="hidden";
-    
+    document.getElementById("op2").innerHTML="";
+    document.getElementById("op4").innerHTML="";
     buttons(suf ,l);
     }
      var strh = h.split(" ");
@@ -70,10 +81,14 @@ var totalh=["राम और श्याम बाजार गयें","र
   document.getElementById("o1").style.visibility="hidden";
   document.getElementById("o2").style.visibility="hidden"
    document.getElementById("o3").style.visibility="hidden";
-   
-    buttons(sufh ,lh);
+   document.getElementById("op2").innerHTML="";
+    document.getElementById("op4").innerHTML="";
+    buttonsh(sufh ,lh);
     }
     function buttons(suff,le){
+      g = 1;
+      document.getElementById("op2").innerHTML="";
+    document.getElementById("op4").innerHTML="";
     for (i =0;i<le;i++){
                         var b = suff[i]
                        var btn = document.createElement("button");
@@ -87,19 +102,55 @@ var totalh=["राम और श्याम बाजार गयें","र
     document.getElementById("op2").innerHTML+=this.innerHTML+" ";
     this.style.display="none";
      document.getElementById("o1").style.visibility="visible";
-    if(r == 2){
      correct();
-    }
-    if(r == 3){
-      correcth();
-    }
  });}
  }
+  function buttonsh(suff,le){
+    g = 1;
+    document.getElementById("op2").innerHTML="";
+    document.getElementById("op4").innerHTML="";
+    for (i =0;i<le;i++){
+                        var b = suff[i]
+                       var btn = document.createElement("button");
+                       var t = document.createTextNode(suff[i]);
+                        btn.id='b'+i;
+                       btn.appendChild(t);
+                       document.body.appendChild(btn);
+                    btn.addEventListener('click', function(suff , le){
+                        document.getElementById("op1").innerHTML = "Formed Sentence(after selecting words)" ;
+          
+    document.getElementById("op2").innerHTML+=this.innerHTML+" ";
+    this.style.display="none";
+     document.getElementById("o1").style.visibility="visible";
+      correcth();
+    
+ });}
+ }
+  function change(){
+  if(r == 2){
+  for(i=0;i<l;i++)
+  {   if(document.getElementById('b'+i).style.display!="none"){
+        document.getElementById('b'+i).style.display="null";
+    }  
+  }
+    sentence(e);
+}
+   if(r == 3){
+  for(i=0;i<l;i++)
+  {   if(document.getElementById('b'+i).style.display!="none"){
+        document.getElementById('b'+i).style.display="null";
+    }   
+  }sentenceh(h); 
+}
+ }  
 function reform(){  
  c = 0; 
   if(r == 2){
   document.getElementById("op2").innerHTML = " ";
   document.getElementById("op1").innerHTML = " " ;
+  document.getElementById("o2").style.visibility="hidden";
+   document.getElementById("o3").style.visibility="hidden";
+   document.getElementById("op4").innerHTML = " ";
       for(i=0;i<l;i++)
   {   if(document.getElementById('b'+i).style.display=="none")
     {
@@ -121,6 +172,9 @@ var p;
     if(r == 3){
       document.getElementById("op2").innerHTML = " ";
       document.getElementById("op1").innerHTML = " " ;
+      document.getElementById("o2").style.visibility="hidden";
+   document.getElementById("o3").style.visibility="hidden";
+   document.getElementById("op4").innerHTML = " ";
       for(i=0;i<lh;i++)
   {   if(document.getElementById('b'+i).style.display=="none")
     {
@@ -137,6 +191,7 @@ var p;
  p = (lh * (lh + 1)) / 2 ;
    if(c == p){
        document.getElementById("o2").style.visibility="visible";
+       
     } 
   }
     }
@@ -151,7 +206,9 @@ var p;
  p = (l * (l + 1)) / 2 ;
    if(c == p){
        document.getElementById("o2").style.visibility="visible";
+       
     }
+
   }
   function correcth(){
      for(i=0;i<lh;i++)
@@ -169,110 +226,115 @@ var p;
   function find(){
     var f = 0;
     var st = document.getElementById("op2").innerHTML;
-    var s = st.replace(/\s+$/, ''); 
+     var ss = st.replace(/^\s+/g, '');
+    s = ss.replace(/\s+$/, '');
+   /* var s = st.replace(/\s+$/, '');  */
     if(r == 2){
       if(rnd == 0){
-   for(i = 0;i<3;i++){
+   for(i = 0;i<7;i++){
     if(line.eng[i].a == s){
        f = f+1;
     } } }
      if(rnd == 1){
-   for(i = 0;i<2;i++){
+   for(i = 0;i<7;i++){
     if(line.eng[i].b == s){
        f = f+1;
     } } }
      if(rnd == 2){
-   for(i = 0;i<2;i++){
+   for(i = 0;i<7;i++){
     if(line.eng[i].c == s){
        f = f+1;
     } } }
      if(rnd == 3){
-   for(i = 0;i<3;i++){
+   for(i = 0;i<7;i++){
     if(line.eng[i].d == s){
        f = f+1;
     } } }
      if(rnd == 4){
-   for(i = 0;i<2;i++){
+   for(i = 0;i<7;i++){
     if(line.eng[i].e == s){
        f = f+1;
     } } 
   } if(rnd == 5){
-   for(i = 0;i<4;i++){
+   for(i = 0;i<7;i++){
     if(line.eng[i].f == s){
        f = f+1;
     } } }
      if(rnd == 6){
-   for(i = 0;i<2;i++){
+   for(i = 0;i<7;i++){
     if(line.eng[i].g == s){
        f = f+1;
     } } }
      if(rnd == 7){
-   for(i = 0;i<2;i++){
+   for(i = 0;i<7;i++){
     if(line.eng[i].h == s){
        f = f+1;
     } } }
      if(rnd == 8){
-   for(i = 0;i<8;i++){
+   for(i = 0;i<7;i++){
     if(line.eng[i].i == s){
        f = f+1;
     } } }
      if(rnd == 9){
-   for(i = 0;i<6;i++){
+   for(i = 0;i<7;i++){
     if(line.eng[i].j == s){
        f = f+1;
     } } }   
-     document.getElementById("o3").style.visibility="visible";    
+         
      if(f == 1){
-       document.getElementById("op4").innerHTML="<span style='color:green;'>Right answer!!!;</span>"
+       document.getElementById("op4").innerHTML="<span style='color:green;font-style:bold;font-size:35px'>Right answer!!!;</span>"
       } 
      else{
-        document.getElementById("op4").innerHTML="<span style='color:red;'>Wrong answer!!!;</span>"
+      document.getElementById("o3").style.visibility="visible";
+        document.getElementById("op4").innerHTML="<span style='color:red;font-style:bold;font-size:35px'>Wrong answer!!!;</span>"
      }
-   } f = 0;
+   } 
   if(r == 3){
       if(rnds == 0){
-   for(i = 0;i<4;i++){
+   for(i = 0;i<11;i++){
     if(lines.hindi[i].a == s){
        f = f+1;
     } } }
     if(rnds == 1){
-   for(i = 0;i<4;i++){
+   for(i = 0;i<11;i++){
     if(lines.hindi[i].b == s){
        f = f+1;
     } } }
     if(rnds == 2){
-   for(i = 0;i<12;i++){
+   for(i = 0;i<11;i++){
     if(lines.hindi[i].c == s){
        f = f+1;
     } } }
  if(rnds == 3){
-   for(i = 0;i<6;i++){
+   for(i = 0;i<11;i++){
     if(lines.hindi[i].d == s){
        f = f+1;
     } } }
  if(rnds == 4){
-   for(i = 0;i<8;i++){
+   for(i = 0;i<11;i++){
     if(lines.hindi[i].e == s){
        f = f+1;
     } } }
  if(rnds ==5){
-   for(i = 0;i<4;i++){
+   for(i = 0;i<11;i++){
     if(lines.hindi[i].f == s){
        f = f+1;
     } } }
  if(rnds == 6){
-   for(i = 0;i<8;i++){
+   for(i = 0;i<11;i++){
     if(lines.hindi[i].g == s){
        f = f+1;
     } } }
-    document.getElementById("o3").style.visibility="visible";    
+        
      if(f == 1){
-       document.getElementById("op4").innerHTML="<span style='color:green;'>Right answer!!!;</span>"
+       document.getElementById("op4").innerHTML="<span style='color:green;font-style:bold;font-size:35px'>Right answer!!!;</span>"
       } 
      else{
-        document.getElementById("op4").innerHTML="<span style='color:red;'>Wrong answer!!!;</span>"
+      document.getElementById("o3").style.visibility="visible";
+        document.getElementById("op4").innerHTML="<span style='color:red;font-style:bold;font-size:35px'>Wrong answer!!!;</span>"
      }
   } f = 0;
+
     }
   function shuffle(a){
     var  j,i,temp;
