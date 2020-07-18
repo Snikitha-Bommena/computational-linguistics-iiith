@@ -22,8 +22,6 @@
 var totalh=["राम और श्याम बाजार गयें","राम सोया और श्याम भी","मैंने उसे बताया कि राम सो रहा है","राम खाकर सोया","बिल्लियों को मारकर कुत्ता सो गया"  ,"एक लाल किताब वहाँ है","एक बड़ी सी किताब वहाँ है"];
     var rnd = Math.floor(Math.random()*10); 
        var line = JSON.parse(text);
-      /* var e = line.eng[rnd].a;
-       var  h = lines.hindi[rnds].a;  */
        var rnds = Math.floor(Math.random()*7);
          var lines = JSON.parse(texth);
        var e = total[rnd];
@@ -43,8 +41,8 @@ var totalh=["राम और श्याम बाजार गयें","र
       document.getElementById("input").innerHTML = "";
        r=2;
        if(g == 1){
-        alert("please reload the page and select language");
-        false;
+          alert("please reload the page and select language");
+         return false; 
        }
        else{
        sentence(e);
@@ -59,8 +57,8 @@ var totalh=["राम और श्याम बाजार गयें","र
        if(g == 1){
         
         alert("please reload the page and select language");
-        false;
-       }
+       return false; 
+           }
        else{
        sentenceh(h); }
         }
@@ -68,6 +66,7 @@ var totalh=["राम और श्याम बाजार गयें","र
           var str = e.split(" ");
    var suf = shuffle(str);
    var l = suf.length;
+   var z = 0;
    function sentence(sen){
   document.getElementById("o1").style.visibility="hidden";
   document.getElementById("o2").style.visibility="hidden";
@@ -128,24 +127,25 @@ var totalh=["राम और श्याम बाजार गयें","र
     
  });}
  }
-  function change(){
-  /*  alert("please reload the page and select language"); */
-  if(r == 2){
+ /* function change(){
+  
+    alert("please reload the page and select language"); 
+ 
+   if(r == 2){
   for(i=0;i<l;i++)
   {   if(document.getElementById('b'+i).style.display!="none"){
-        document.getElementById('b'+i).style.display="null";
-    }  
-  }
-    sentence(e);
-}
+        document.getElementById('b'+i).style.visibility="hidden";
+    }   
+  }sentence(e); 
+} 
    if(r == 3){
   for(i=0;i<l;i++)
   {   if(document.getElementById('b'+i).style.display!="none"){
         document.getElementById('b'+i).style.display="null";
     }   
   }sentenceh(h); 
-}
- } 
+} 
+ }  */
 function reform(){  
  c = 0; 
   if(r == 2){
@@ -290,6 +290,8 @@ var p;
       } 
      else{
       document.getElementById("o3").style.visibility="visible";
+      document.getElementById("o3").innerHTML="Get Correct Sentence";
+       document.getElementById("op5").innerHTML="";
         document.getElementById("op4").innerHTML="<span style='color:red;font-style:bold;font-size:35px'>Wrong answer!!!</span>"
      }
    } 
@@ -335,15 +337,16 @@ var p;
       } 
      else{
       document.getElementById("o3").style.visibility="visible";
+      document.getElementById("o3").innerHTML="Get Correct Sentence";
+       document.getElementById("op5").innerHTML="";
         document.getElementById("op4").innerHTML="<span style='color:red;font-style:bold;font-size:35px'>Wrong answer!!!;</span>"
      }
   } f = 0;
-
+    
     }
      var x = 0;
     var y = 0;
     function final(){
-      document.getElementById("o3").innerHTML=="Get Correct Sentence";
       if(r == 2){
               if(rnd == 0){
     if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
