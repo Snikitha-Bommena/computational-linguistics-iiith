@@ -20,8 +20,7 @@
 '{"a":"none","b":"none","c":"बताया उसे मैंने कि सो रहा है राम","d":"none","e":"none","f":"none","g":"none"}]}';
  var total=["John ate an apple before afternoon","some students like to study in the night","John and Mary went to church","John went to church after eating","did he go to market","the woman who called my sister sells cosmetics","John goes to the library and studies","John ate an apple so did she","the teacher returned the book after she noticed the error","I told her that I bought a book yesterday"];
 var totalh=["राम और श्याम बाजार गयें","राम सोया और श्याम भी","मैंने उसे बताया कि राम सो रहा है","राम खाकर सोया","बिल्लियों को मारकर कुत्ता सो गया"  ,"एक लाल किताब वहाँ है","एक बड़ी सी किताब वहाँ है"];
-     var rnd = Math.floor(Math.random()*10); 
-   
+    var rnd = Math.floor(Math.random()*10); 
        var line = JSON.parse(text);
       /* var e = line.eng[rnd].a;
        var  h = lines.hindi[rnds].a;  */
@@ -336,6 +335,355 @@ var p;
   } f = 0;
 
     }
+    var x = 0;
+    var y = 0;
+    function final(){
+      if(r == 2){
+              if(rnd == 0){
+    if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
+    {
+       for(i = 0;i<3;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].a+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
+   x =1; } }
+else if(x == 1){
+  document.getElementById("op5").innerHTML=""
+   document.getElementById("o3").innerHTML="Get Answers";
+   y =1;
+   x = 0;}
+else if(document.getElementById("o3").innerHTML=="Get Answers"){
+   for(i=0;i<3;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].a+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
+   y =0;
+   x = 1; } } }
+    if(rnd == 1){
+    if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
+    {
+       for(i = 0;i<2;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].b+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
+   x =1; } }
+else if(x == 1){
+  document.getElementById("op5").innerHTML=""
+   document.getElementById("o3").innerHTML="Get Answers";
+   y =1;
+   x = 0;}
+else if(document.getElementById("o3").innerHTML=="Get Answers"){
+   for(i=0;i<2;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].b+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
+   y =0;
+   x = 1; } } }
+    if(rnd == 2){
+    if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
+    {
+       for(i = 0;i<2;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].c+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
+   x =1; } }
+else if(x == 1){
+  document.getElementById("op5").innerHTML=""
+   document.getElementById("o3").innerHTML="Get Answers";
+   y =1;
+   x = 0;}
+else if(document.getElementById("o3").innerHTML=="Get Answers"){
+   for(i=0;i<2;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].c+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
+   y =0;
+   x = 1; } } }
+    if(rnd == 3){
+    if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
+    {
+       for(i = 0;i<3;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].d+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
+   x =1; } }
+else if(x == 1){
+  document.getElementById("op5").innerHTML=""
+   document.getElementById("o3").innerHTML="Get Answers";
+   y =1;
+   x = 0;}
+else if(document.getElementById("o3").innerHTML=="Get Answers"){
+   for(i=0;i<3;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].d+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
+   y =0;
+   x = 1; } } }
+    if(rnd == 4){
+    if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
+    {
+       for(i = 0;i<2;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].e+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
+   x =1; } }
+else if(x == 1){
+  document.getElementById("op5").innerHTML=""
+   document.getElementById("o3").innerHTML="Get Answers";
+   y =1;
+   x = 0;}
+else if(document.getElementById("o3").innerHTML=="Get Answers"){
+   for(i=0;i<2;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].e+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
+   y =0;
+   x = 1; } } }
+    if(rnd == 5){
+    if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
+    {
+       for(i = 0;i<4;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].f+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
+   x =1; } }
+else if(x == 1){
+  document.getElementById("op5").innerHTML=""
+   document.getElementById("o3").innerHTML="Get Answers";
+   y =1;
+   x = 0;}
+else if(document.getElementById("o3").innerHTML=="Get Answers"){
+   for(i=0;i<4;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].f+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
+   y =0;
+   x = 1; } } }
+    if(rnd == 6){
+    if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
+    {
+       for(i = 0;i<4;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].g+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
+   x =1; } }
+else if(x == 1){
+  document.getElementById("op5").innerHTML=""
+   document.getElementById("o3").innerHTML="Get Answers";
+   y =1;
+   x = 0;}
+else if(document.getElementById("o3").innerHTML=="Get Answers"){
+   for(i=0;i<4;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].g+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
+   y =0;
+   x = 1; } } }
+    if(rnd == 7){
+    if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
+    {
+       for(i = 0;i<2;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].h+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
+   x =1; } }
+else if(x == 1){
+  document.getElementById("op5").innerHTML=""
+   document.getElementById("o3").innerHTML="Get Answers";
+   y =1;
+   x = 0;}
+else if(document.getElementById("o3").innerHTML=="Get Answers"){
+   for(i=0;i<2;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].h+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
+   y =0;
+   x = 1; } } }
+    if(rnd == 8){
+    if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
+    {
+       for(i = 0;i<8;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].i+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
+   x =1; } }
+else if(x == 1){
+  document.getElementById("op5").innerHTML=""
+   document.getElementById("o3").innerHTML="Get Answers";
+   y =1;
+   x = 0;}
+else if(document.getElementById("o3").innerHTML=="Get Answers"){
+   for(i=0;i<8;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].i+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
+   y =0;
+   x = 1; } } }
+    if(rnd == 9){
+    if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
+    {
+       for(i = 0;i<6;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].j+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
+   x =1; } }
+else if(x == 1){
+  document.getElementById("op5").innerHTML=""
+   document.getElementById("o3").innerHTML="Get Answers";
+   y =1;
+   x = 0;}
+else if(document.getElementById("o3").innerHTML=="Get Answers"){
+   for(i=0;i<6;i++)
+  { 
+   document.getElementById("op5").innerHTML+=line.eng[i].j+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
+   y =0;
+   x = 1; } } }
+   } 
+
+if(r == 3){
+if(rnds == 0){
+    if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
+    {
+       for(i = 0;i<4;i++)
+  { 
+   document.getElementById("op5").innerHTML+=lines.hindi[i].a+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
+   x =1; } }
+else if(x == 1){
+  document.getElementById("op5").innerHTML=""
+   document.getElementById("o3").innerHTML="Get Answers";
+   y =1;
+   x = 0;}
+else if(document.getElementById("o3").innerHTML=="Get Answers"){
+   for(i=0;i<4;i++)
+  { 
+   document.getElementById("op5").innerHTML+=lines.hindi[i].a+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
+   y =0;
+   x = 1; } } }
+    if(rnds == 1){
+    if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
+    {
+       for(i = 0;i<4;i++)
+  { 
+   document.getElementById("op5").innerHTML+=lines.hindi[i].b+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
+   x =1; } }
+else if(x == 1){
+  document.getElementById("op5").innerHTML=""
+   document.getElementById("o3").innerHTML="Get Answers";
+   y =1;
+   x = 0;}
+else if(document.getElementById("o3").innerHTML=="Get Answers"){
+   for(i=0;i<4;i++)
+  { 
+   document.getElementById("op5").innerHTML+=lines.hindi[i].b+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
+   y =0;
+   x = 1; } } }
+    if(rnds == 2){
+    if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
+    {
+       for(i = 0;i<12;i++)
+  { 
+   document.getElementById("op5").innerHTML+=lines.hindi[i].c+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
+   x =1; } }
+else if(x == 1){
+  document.getElementById("op5").innerHTML=""
+   document.getElementById("o3").innerHTML="Get Answers";
+   y =1;
+   x = 0;}
+else if(document.getElementById("o3").innerHTML=="Get Answers"){
+   for(i=0;i<12;i++)
+  { 
+   document.getElementById("op5").innerHTML+=lines.hindi[i].c+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
+   y =0;
+   x = 1; } } }
+    if(rnds == 3){
+    if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
+    {
+       for(i = 0;i<6;i++)
+  { 
+   document.getElementById("op5").innerHTML+=lines.hindi[i].d+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
+   x =1; } }
+else if(x == 1){
+  document.getElementById("op5").innerHTML=""
+   document.getElementById("o3").innerHTML="Get Answers";
+   y =1;
+   x = 0;}
+else if(document.getElementById("o3").innerHTML=="Get Answers"){
+   for(i=0;i<6;i++)
+  { 
+   document.getElementById("op5").innerHTML+=lines.hindi[i].d+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
+   y =0;
+   x = 1; } } }
+    if(rnds == 4){
+    if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
+    {
+       for(i = 0;i<8;i++)
+  { 
+   document.getElementById("op5").innerHTML+=lines.hindi[i].e+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
+   x =1; } }
+else if(x == 1){
+  document.getElementById("op5").innerHTML=""
+   document.getElementById("o3").innerHTML="Get Answers";
+   y =1;
+   x = 0;}
+else if(document.getElementById("o3").innerHTML=="Get Answers"){
+   for(i=0;i<8;i++)
+  { 
+   document.getElementById("op5").innerHTML+=lines.hindi[i].e+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
+   y =0;
+   x = 1; } } }
+    if(rnds == 5){
+    if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
+    {
+       for(i = 0;i<4;i++)
+  { 
+   document.getElementById("op5").innerHTML+=lines.hindi[i].f+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
+   x =1; } }
+else if(x == 1){
+  document.getElementById("op5").innerHTML=""
+   document.getElementById("o3").innerHTML="Get Answers";
+   y =1;
+   x = 0;}
+else if(document.getElementById("o3").innerHTML=="Get Answers"){
+   for(i=0;i<4;i++)
+  { 
+   document.getElementById("op5").innerHTML+=lines.hindi[i].f+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
+   y =0;
+   x = 1; } } }
+    if(rnds == 6){
+    if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
+    {
+       for(i = 0;i<8;i++)
+  { 
+   document.getElementById("op5").innerHTML+=lines.hindi[i].g+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
+   x =1; } }
+else if(x == 1){
+  document.getElementById("op5").innerHTML=""
+   document.getElementById("o3").innerHTML="Get Answers";
+   y =1;
+   x = 0;}
+else if(document.getElementById("o3").innerHTML=="Get Answers"){
+   for(i=0;i<8;i++)
+  { 
+   document.getElementById("op5").innerHTML+=lines.hindi[i].g+'<br>';
+   document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
+   y =0;
+   x = 1; } } }
+ }  }
+    
   function shuffle(a){
     var  j,i,temp;
     for(i = a.length-1;i>0;i--){
