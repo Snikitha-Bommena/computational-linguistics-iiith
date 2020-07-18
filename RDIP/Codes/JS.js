@@ -43,7 +43,8 @@ var totalh=["राम और श्याम बाजार गयें","र
       document.getElementById("input").innerHTML = "";
        r=2;
        if(g == 1){
-        change();
+        alert("please reload the page and select language");
+        false;
        }
        else{
        sentence(e);
@@ -56,7 +57,9 @@ var totalh=["राम और श्याम बाजार गयें","र
       document.getElementById("input").innerHTML = "";
         r = 3;
        if(g == 1){
-        change();
+        
+        alert("please reload the page and select language");
+        false;
        }
        else{
        sentenceh(h); }
@@ -126,6 +129,7 @@ var totalh=["राम और श्याम बाजार गयें","र
  });}
  }
   function change(){
+  /*  alert("please reload the page and select language"); */
   if(r == 2){
   for(i=0;i<l;i++)
   {   if(document.getElementById('b'+i).style.display!="none"){
@@ -141,7 +145,7 @@ var totalh=["राम और श्याम बाजार गयें","र
     }   
   }sentenceh(h); 
 }
- }  
+ } 
 function reform(){  
  c = 0; 
   if(r == 2){
@@ -150,6 +154,7 @@ function reform(){
   document.getElementById("o2").style.visibility="hidden";
    document.getElementById("o3").style.visibility="hidden";
    document.getElementById("op4").innerHTML = " ";
+    document.getElementById("op5").innerHTML = " ";
       for(i=0;i<l;i++)
   {   if(document.getElementById('b'+i).style.display=="none")
     {
@@ -281,11 +286,11 @@ var p;
     } } }   
          
      if(f == 1){
-       document.getElementById("op4").innerHTML="<span style='color:green;font-style:bold;font-size:35px'>Right answer!!!;</span>"
+       document.getElementById("op4").innerHTML="<span style='color:green;font-style:bold;font-size:35px'>Right answer!!!</span>"
       } 
      else{
       document.getElementById("o3").style.visibility="visible";
-        document.getElementById("op4").innerHTML="<span style='color:red;font-style:bold;font-size:35px'>Wrong answer!!!;</span>"
+        document.getElementById("op4").innerHTML="<span style='color:red;font-style:bold;font-size:35px'>Wrong answer!!!</span>"
      }
    } 
   if(r == 3){
@@ -335,9 +340,10 @@ var p;
   } f = 0;
 
     }
-    var x = 0;
+     var x = 0;
     var y = 0;
     function final(){
+      document.getElementById("o3").innerHTML=="Get Correct Sentence";
       if(r == 2){
               if(rnd == 0){
     if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
@@ -462,7 +468,7 @@ else if(document.getElementById("o3").innerHTML=="Get Answers"){
     if(rnd == 6){
     if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
     {
-       for(i = 0;i<4;i++)
+       for(i = 0;i<2;i++)
   { 
    document.getElementById("op5").innerHTML+=line.eng[i].g+'<br>';
    document.getElementById("o3").innerHTML="Hide the correct Sentence" ;
@@ -473,7 +479,7 @@ else if(x == 1){
    y =1;
    x = 0;}
 else if(document.getElementById("o3").innerHTML=="Get Answers"){
-   for(i=0;i<4;i++)
+   for(i=0;i<2;i++)
   { 
    document.getElementById("op5").innerHTML+=line.eng[i].g+'<br>';
    document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
@@ -540,7 +546,6 @@ else if(document.getElementById("o3").innerHTML=="Get Answers"){
    y =0;
    x = 1; } } }
    } 
-
 if(r == 3){
 if(rnds == 0){
     if(document.getElementById("o3").innerHTML=="Get Correct Sentence")
@@ -682,7 +687,9 @@ else if(document.getElementById("o3").innerHTML=="Get Answers"){
    document.getElementById("o3").innerHTML="Hide the correct Sentence"; 
    y =0;
    x = 1; } } }
- }  }
+
+ } 
+  }
     
   function shuffle(a){
     var  j,i,temp;
