@@ -1,0 +1,7 @@
+1.dropdown to select corpus1,2,3;
+2.display 2 blocks to take input
+3.if input wrong- alert box display,colour of the block changes to red
+4.if input is right - hide submit button and visible continue button
+5. change mse input
+6.follow steps-2,3,4
+7.use snowball stemmer
