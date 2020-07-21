@@ -5,12 +5,18 @@ var c3 = ["A man had a little dog, and he was very fond of it. He would pat its 
         var lang = corpus.value;
         if(lang == "1"){
          document.getElementById("demo").innerHTML = c1;
+         document.getElementById("dem").innerHTML = "Enter the correct number of tokens and types from the corpus";
+         
         }
         if(lang == "2"){
           document.getElementById("demo").innerHTML = c2;
+                   document.getElementById("dem").innerHTML = "Enter the correct number of tokens and types from the corpus";
+
         }
         if(lang == "3"){
            document.getElementById("demo").innerHTML = c3;
+                    document.getElementById("dem").innerHTML = "Enter the correct number of tokens and types from the corpus";
+
            
         }
     }
