@@ -21,6 +21,18 @@ th,td
 	 font-family: sans-serif;
 	padding:10px;
 }
+div.sub{
+	position : relative;
+			top : 300px;
+}
+div.ans{
+	position : relative;
+			top : 310px;
+}
+div.cont{
+	position : relative;
+			top : 330px;
+}
 </style>
 </head>
 <body>
@@ -35,6 +47,12 @@ th,td
 <p id="demo"></p>
 <p id="dem"></p>
 	<table class="table"><tr><th>#tokens:</th><td><b><input type="text" id="token"></b></td></tr>
-			<tr><th>#types</th><td><b><input type="text" id="text"></b></td></tr></table>
+			<tr><th>#types</th><td><b><input type="text" id="type"></b></td></tr></table>
+<div class = "sub">
+<button id="o1" style="visibility: visible" onclick="submit()">Submit</button><br></div>
+<div class = "ans">
+<p id="op1"></p></div>
+<div class = "cont">
+<button id="o2" style="visibility: hidden" onclick="conti()">Continue</button><br></div>
 </body>
 </html>
