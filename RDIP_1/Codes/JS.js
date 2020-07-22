@@ -23,47 +23,80 @@ var c3 = ["A man had a little dog, and he was very fond of it. He would pat its 
     function ele(){
         document.getElementById("o2").style.visibility="hidden";
         document.getElementById("op1").innerHTML=""; 
+        document.getElementById("o3").style.visibility="hidden";
+        document.getElementById("o4").style.visibility="hidden";
     }
   function submit(){
   	var x = document.getElementById("token").value;
      	var y = document.getElementById("type").value;
+     	var c=0;
+     	var d=0;
      if(r == 1){
-     	if((x == 169) && (y == 80)){
+     	if(x == 169){
+     		c=1;
      		document.getElementById("token").style.background = "green"
-     		document.getElementById("type").style.background = "green"
-          document.getElementById("op1").innerHTML="<span style='color:green;font-style:bold;font-size:35px'>Right answer!!!</span>";
-          document.getElementById("o2").style.visibility="visible";
      	}
      	else{
      		document.getElementById("token").style.background = "red"
-     		document.getElementById("type").style.background = "red"
-     		document.getElementById("op1").innerHTML="<span style='color:red;font-style:bold;font-size:35px'>Wrong answer!!!</span>"
      	}
-     }
+     	if(y == 80){
+     		d = 1;
+     		document.getElementById("type").style.background = "green"
+     	} 
+     	else{
+     		document.getElementById("type").style.background = "red"
+     	}}
       if(r == 2){
-     	if((x == 111) && (y == 65)){
+     if(x == 111){
+     		c=1;
      		document.getElementById("token").style.background = "green"
-     		document.getElementById("type").style.background = "green"
-          document.getElementById("op1").innerHTML="<span style='color:green;font-style:bold;font-size:35px'>Right answer!!!</span>";
-          document.getElementById("o2").style.visibility="visible";
      	}
      	else{
      		document.getElementById("token").style.background = "red"
+     	}
+     	if(y == 65){
+     		d = 1;
+     		document.getElementById("type").style.background = "green"
+     	} 
+     	else{
      		document.getElementById("type").style.background = "red"
-     		document.getElementById("op1").innerHTML="<span style='color:red;font-style:bold;font-size:35px'>Wrong answer!!!</span>"
      	}
      }
       if(r == 3){
-     	if((x == 221) && (y == 95)){
+      if(x == 221){
+     		c=1;
      		document.getElementById("token").style.background = "green"
-     		document.getElementById("type").style.background = "green"
-          document.getElementById("op1").innerHTML="<span style='color:green;font-style:bold;font-size:35px'>Right answer!!!</span>";
-          document.getElementById("o2").style.visibility="visible";
      	}
      	else{
      		document.getElementById("token").style.background = "red"
+     	}
+     	if(y == 95){
+     		d = 1;
+     		document.getElementById("type").style.background = "green"
+     	} 
+     	else{
      		document.getElementById("type").style.background = "red"
-     		document.getElementById("op1").innerHTML="<span style='color:red;font-style:bold;font-size:35px'>Wrong answer!!!</span>"
      	}
      }
+     if((c == 1) && (d == 1)){
+         document.getElementById("op1").innerHTML="<span style='color:green;font-style:bold;font-size:35px'>Right answer!!!</span>";
+          document.getElementById("o2").style.visibility="visible";
+     	}
+     	else{
+     		document.getElementById("op1").innerHTML="<span style='color:red;font-style:bold;font-size:35px'>Wrong answer!!!</span>";
+     	}
+     	c =0;
+     	d = 0;
+     }
+  function conti(){
+  	document.getElementById("o1").style.visibility="hidden";
+  	document.getElementById("op1").innerHTML=""; 
+  	document.getElementById("op2").innerHTML="Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types."; 
+   document.getElementById("o2").style.visibility="hidden";
+   document.getElementById("op1").innerHTML="#new types:";
+   document.getElementById("o3").style.visibility="visible";
+   document.getElementById("o4").style.visibility="visible";
+  }
+  function snow(){
+  	
   }
